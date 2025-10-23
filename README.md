@@ -58,7 +58,14 @@ All analyses were conducted using open-source software and publicly available to
 - dHCP structural pipeline: https://github.com/BioMedIA/dhcp-structural-pipeline
 - dHCP functional pipeline: https://git.fmrib.ox.ac.uk/seanf/dhcp-neonatal-fmri-pipeline/-/tree/master
 - dHCP fMRI Surface: https://git.fmrib.ox.ac.uk/seanf/dhcp-neonatal-fmri-pipeline/-/blob/master/doc/surface.md 
-
+> **Note on Partial Volume Correction (PVC) for Neonatal Data:**  
+> 
+> For all fMRI images in the dHCP dataset, minimal preprocessing was initially performed by the dHCP consortium and validated in prior studies. Building upon this framework, we extended the preprocessing steps to the cortical surface by projecting each participant’s rs-fMRI time series from native volumetric space to the native cortical surface using a *ribbon-constrained volume-to-surface mapping* approach. The surface-projected time series were then resampled to the 40-week postmenstrual age (PMA) symmetric surface template via MSM-based native-to-template registration.  
+> 
+> Importantly, the relatively coarse spatial resolution of neonatal fMRI (2.15 mm isotropic) exceeds the typical neonatal cortical thickness (~1 mm), resulting in substantial **partial volume effects (PVC)** within gray matter voxels. Consequently, the standard HCP pipeline is not directly applicable to neonatal data.  
+> 
+> To address this issue, the **dHCP functional pipeline** incorporates a **volumetric PVC procedure** that adjusts for gray matter contamination in the functional signal prior to surface mapping. This correction is implemented in the official dHCP processing workflow (see [dHCP surface documentation](https://git.fmrib.ox.ac.uk/seanf/dhcp-neonatal-fmri-pipeline/-/blob/master/doc/surface.md?ref_type=heads)).
+> 
 #### Postprocessing
 
 - SPM12 toolbox: https://www.fil.ion.ucl.ac.uk/spm/software/spm12/
