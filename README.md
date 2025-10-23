@@ -95,6 +95,16 @@ All analyses were conducted using open-source software and publicly available to
      [Download template](https://biomedic.doc.ic.ac.uk/brain-development/downloads/dhcpSym_template.zip)
 
 ## **Custom Scripts and Analysis Steps**
+#### Data Availability
+
+Due to file size limitations, the full processed data used in this study are provided via an external repository.  
+All datasets required to reproduce the main analyses can be downloaded from the following link:
+
+**Baidu Netdisk (Convergent_Divergent_FOCA_Development):**  
+🔗 [https://pan.baidu.com/s/14Y-gphMJy3pQIZmPjoVRoA?pwd=1234](https://pan.baidu.com/s/14Y-gphMJy3pQIZmPjoVRoA?pwd=1234)  
+
+Please download the folder named **“Convergent_Divergent_FOCA_Development”** and place it in the project directory to run the provided scripts successfully.
+
 
 Customized MATLAB and R scripts are provided for individualized network generation, FOCA computation, and visualization.
  Main analyses were performed following these steps:
