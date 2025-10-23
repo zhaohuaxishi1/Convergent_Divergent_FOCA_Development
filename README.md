@@ -137,10 +137,10 @@ Customized MATLAB and R scripts are provided for individualized network generati
     `s7_2_visualize_developmental_difference_FOCA_CohenD.m`
 8. **Developmental modeling (GAM):**
     `s8_1_neonatal_FOCA_GAM_analysis.R`, `s8_2_age_effects_neonatal_FOCA_GAM.R`
-9. **Predicting neurodevelopmental outcomes:**
+   **Predicting neurodevelopmental outcomes:**
     `s8_3_behavior_prediction_neonatal_FOCA_GLM.m`
     SVR models predicted 18-month cognitive and language outcomes.
-10. **Comparing FOCA and conventional FC:**
+9. **Comparing FOCA and conventional FC:**
      `s9_1_FOCA_vs_FC_stability_comparison.m`,
      `s9_2_FOCA_vs_FC_individual_dissimilarity.m`,
      `s9_3_NeonatalAgePrediction_SVR_FOCA_dHCP.m`,
