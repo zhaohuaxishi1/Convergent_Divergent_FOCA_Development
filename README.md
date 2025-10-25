@@ -4,7 +4,7 @@ E-mail: [zhaojianlong@mail.bnu.edu.cn](mailto:zhaojianlong@mail.bnu.edu.cn)
 
 This repository provides code and source data that support the findings of the article entitled "*Convergent and divergent functional topographies of individualized human brain network and their developmental origins*“ 
 
-## Oveview
+## Overview
 
 This repository includes standalone software, source code, and demonstration data used in the analyses.
  All data required to reproduce the findings are publicly available, including:
