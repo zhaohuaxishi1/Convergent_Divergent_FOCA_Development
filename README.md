@@ -1,13 +1,13 @@
-# Convergent and divergent functional topographies of individualized human brain network and their developmental origins
+# Convergent and divergent functional topographies of individualized human brain networks and their developmental origins
 
 E-mail: [zhaojianlong@mail.bnu.edu.cn](mailto:zhaojianlong@mail.bnu.edu.cn)
 
-This repository provides code and source data that support the findings of the article entitled "*Convergent and divergent functional topographies of individualized human brain network and their developmental origins*“ 
+This repository provides code and source data that support the findings of the article entitled "*Convergent and divergent functional topographies of individualized human brain networks and their developmental origins*“ 
 
 ## Overview
 
-This repository includes standalone software, source code, and demonstration data used in the analyses.
- All data required to reproduce the findings are publicly available, including:
+This repository includes standalone software, the source code, and demonstration data used in the analyses.
+ All the data required to reproduce the findings are publicly available and include the following:
 
 - Individualized functional networks
 - Group- and individual-level functional topographies
@@ -22,7 +22,7 @@ All files are hosted in a publicly accessible cloud repository (https://github.c
 - **dHCP dataset:** https://nda.nih.gov/
 - **HCP dataset:** https://www.humanconnectome.org/
 
-Source data supporting the findings are provided with this paper.
+Source data supporting the findings are provided in this paper.
 
 ------
 
@@ -32,21 +32,21 @@ Source data supporting the findings are provided with this paper.
    Group-level functional topography from the MSC dataset, representing the canonical spatial organization of individualized functional networks.
 
   **HCP_Group_Functional_Topography.dtseries.nii**
-   Group-level functional topography derived from the HCP adult dataset, used as a reference for adult network alignment and comparison.
+   Group-level functional topography derived from the HCP adult dataset, which was used as a reference for adult network alignment and comparison.
 
   **dHCP_Group_Functional_Topography.dtseries.nii**
    Group-level functional topography derived from the dHCP neonatal dataset, representing the reference network architecture at birth.
 
   **MSC_FOCA_Hierarchical_Structure.mat**
    (Associated visualization: `./results/FOCA/MSC_FOCA_ReorderedMatrix.png`)
-   Hierarchical organization of FOCA (Functional Topography Covariance) derived from the MSC dataset, reflecting nested antagonistic structures across cortical systems.
+   Hierarchical organization of the functional topography covariance (FOCA) derived from the MSC dataset, reflecting nested antagonistic structures across cortical systems.
 
   **corrMatrix_dHCP_reordered.mat**
    (Associated visualization: `./results/FOCA/FOCA_ReorderedMatrix_dHCP.png`)
-   FOCA matrix from the dHCP dataset, reordered according to hierarchical clustering for visualization and cross-age comparison.
+   FOCA matrix obtained from the dHCP dataset, reordered according to hierarchical clustering for visualization and cross-age comparison.
 
   **37_44_week_dHCP_group_topography/**
-   Group-level functional topographies across 37–44 weeks PMA, illustrating the progressive strengthening of negative connectivity within auditory and action-mode (AMN) networks, marking the emergence of antagonistic network organization during late gestation.
+   Group-level functional topographies from 37 to 44 weeks PMA, illustrating the progressive strengthening of negative connectivity within auditory and action-mode (AMN) networks and the emergence of antagonistic network organization during late gestation.
 
 ## **Code and Pipelines**
 
@@ -60,11 +60,11 @@ All analyses were conducted using open-source software and publicly available to
 - dHCP fMRI Surface: https://git.fmrib.ox.ac.uk/seanf/dhcp-neonatal-fmri-pipeline/-/blob/master/doc/surface.md 
 > **Note on Partial Volume Correction (PVC) for Neonatal Data:**  
 > 
-> For all fMRI images in the dHCP dataset, minimal preprocessing was initially performed by the dHCP consortium and validated in prior studies. Building upon this framework, we extended the preprocessing steps to the cortical surface by projecting each participant’s rs-fMRI time series from native volumetric space to the native cortical surface using a *ribbon-constrained volume-to-surface mapping* approach. The surface-projected time series were then resampled to the 40-week postmenstrual age (PMA) symmetric surface template via MSM-based native-to-template registration.  
+> For all the fMRI images in the dHCP dataset, minimal preprocessing was initially performed by the dHCP consortium and validated in prior studies. Building upon this framework, we extended the preprocessing steps to the cortical surface by projecting each participant’s rs-fMRI time series from native volumetric space to the native cortical surface using a *ribbon-constrained volume-to-surface mapping* approach. The surface-projected time series were then resampled to the 40-week postmenstrual age (PMA) symmetric surface template via MSM-based native-to-template registration.  
 > 
 > Importantly, the relatively coarse spatial resolution of neonatal fMRI (2.15 mm isotropic) exceeds the typical neonatal cortical thickness (~1 mm), resulting in substantial **partial volume effects (PVC)** within gray matter voxels. Consequently, the standard HCP pipeline is not directly applicable to neonatal data.  
 > 
-> To address this issue, the **dHCP functional pipeline** incorporates a **volumetric PVC procedure** that adjusts for gray matter contamination in the functional signal prior to surface mapping. This correction is implemented in the official dHCP processing workflow (see [dHCP surface documentation](https://git.fmrib.ox.ac.uk/seanf/dhcp-neonatal-fmri-pipeline/-/blob/master/doc/surface.md?ref_type=heads)).
+> To address this issue, the **dHCP functional pipeline** incorporates a **volumetric PVC procedure** that adjusts for grey matter contamination in the functional signal prior to surface mapping to address this issue. This correction is implemented in the official dHCP processing workflow (see [dHCP surface documentation](https://git.fmrib.ox.ac.uk/seanf/dhcp-neonatal-fmri-pipeline/-/blob/master/doc/surface.md?ref_type=heads)).
 > 
 #### Postprocessing
 
@@ -76,8 +76,8 @@ All analyses were conducted using open-source software and publicly available to
 #### Analysis
 
 - Template Matching v1.0: https://github.com/DCAN-Labs/compare_matrices_to_assign_networks
-- Support Vector Regression (SVR) model: https://github.com/ZaixuCui/Pattern_Regression_Clean and LIBSVM (v3.25): https://www.csie.ntu.edu.tw/~cjlin/libsvm/
-- Generalized Additive Models (GAM): implemented in R using the mgcv package (https://cran.r-project.org/web/packages/mgcv/index.html)
+- Support vector regression (SVR) model: https://github.com/ZaixuCui/Pattern_Regression_Clean and LIBSVM (v3.25): https://www.csie.ntu.edu.tw/~cjlin/libsvm/
+- Generalized additive models (GAM): implemented in R using the mgcv package (https://cran.r-project.org/web/packages/mgcv/index.html)
 - R 4.0.3: https://www.r-project.org
 - MSM (Multimodal Surface Matching): https://github.com/ecr05/MSM_HOCR/releases
 
@@ -101,7 +101,7 @@ All analyses were conducted using open-source software and publicly available to
      Symmetric 40-week dHCP surfaces (32k space) for neonatal topography visualization.
      [Download template](https://biomedic.doc.ic.ac.uk/brain-development/downloads/dhcpSym_template.zip)
 
-## **Custom Scripts and Analysis Steps**
+## **Custom Scripts and Steps of the Analysis**
 #### Data Availability
 
 Due to file size limitations, the full processed data used in this study are provided via an external repository.  
@@ -114,15 +114,15 @@ Please download the folder named **“Convergent_Divergent_FOCA_Development”**
 
 
 Customized MATLAB and R scripts are provided for individualized network generation, FOCA computation, and visualization.
- Main analyses were performed following these steps:
+ The main analyses were performed following these steps:
 
 1. **Generate group and individual functional networks:**
     `s1_1_generate_group_templates.m`, `s1_2_generate_individual_networks.m`
-    Individualized networks generated using *Template Matching*.
+    Individualized networks were generated using *Template Matching*.
 2. **Compute individualized functional topography:**
     `s2_generate_individual_topography.m`
-    Each network’s mean time series correlated with all cortical vertices.
-3. **Construct FOCA matrix:**
+    The mean time series of each network correlated with all cortical vertices.
+3. **Construct the FOCA matrix:**
     `s3_compute_foca_matrix.m`
     Quantifies convergent (positive) and divergent (negative) inter-network covariance.
 4. **Assess reproducibility and variability:**
